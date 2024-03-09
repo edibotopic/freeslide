@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: Motion Canvas
+subtitle: The Code
+permalink: "/howto/motionCanvas.html"
+type: howto
+---
+
+<main class="howto-main">
+    <p>Motion Canvas can be used to make a slideshows programmatically.
+    On the right you can find a video overview from its creator.
+</main>
+
+<hr class="separator">
+
+<div class="howto-grid-container">
+
+    {% include "partials/toc-howto.njk" %}
+
+    <div class="howto-grid-snippet">
+<pre><code>import {makeScene2D, Circle} from '@motion-canvas/2d';
+import {all, createRef} from '@motion-canvas/core';
+
+export default makeScene2D(function* (view) {
+  const myCircle = createRef&lt;Circle&gt;();
+
+  view.add(
+    &lt;Circle
+      ref={myCircle}
+      // try changing these properties:
+      x={-300}
+      width={140}
+      height={140}
+      fill=&quot;#e13238&quot;
+    /&gt;,
+  );
+
+  yield* all(
+    myCircle().position.x(300, 1).to(-300, 1),
+    myCircle().fill('#e6a700', 1).to('#e13238', 1),
+  );
+});</code></pre>
+</div>
+
+
+    <div class="howto-grid-output">
+        <iframe class="slideshow-iframe" src="https://www.youtube.com/embed/WTUafAwrunE?si=KMx1z3jqz5vNaNc8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>
+
+<hr class="separator">
+
+<h2>{{ subtitle }}</h2>
+
+<p>The necessary modules are included with
+<code>import</code>, 
+</p>
+
+<p>A <i>scene</i> is created and a <code>&lt;Circle/&gt</code>
+node is created.
+
+<p>The circle is given some default properties
+and then animated in the <code>yield block</code></p>

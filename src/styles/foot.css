@@ -1,0 +1,15 @@
+.foot {
+  display: flex;
+  position: relative;
+  bottom: 10px;
+  color: var(--txt-col);
+  background: var(--nav-col);
+  font-size: 20px;
+  justify-content: space-around;
+}
+
+.foot li {
+  color: var(--txt-col);
+  list-style-type: none;
+}
+

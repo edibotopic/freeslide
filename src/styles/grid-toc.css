@@ -1,0 +1,26 @@
+[class*="grid-toc"] ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding-left: 0px;
+}
+
+
+[class*="grid-toc"] li :link {
+  color: var(--prim-col);
+  text-decoration: none;
+}
+
+[class*="grid-toc"] li :hover {
+    color: var(--txt-col);
+}
+
+[class*="grid-toc"] li :visited {
+    color: var(--txt-dark-col);
+}
+
+[class*="grid-toc"] li :hover::before {
+  content: "●";
+  color: violet;
+  transition: 0.6s;
+}
+

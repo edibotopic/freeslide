@@ -1,0 +1,53 @@
+---
+layout: layouts/base.njk
+title: Motion Canvas
+subtitle: The Code
+permalink: "/howto/pandoc.html"
+type: howto
+---
+
+<main class="howto-main">
+    <p>Pandoc is a powerful CLI tool for converting document formats.
+    Here it will be used to convert a plaintext file to a web-based
+    slide presentation using the lightweight DZslides CSS library.
+</main>
+
+<hr class="separator">
+
+<div class="howto-grid-container">
+
+    {% include "partials/toc-howto.njk" %}
+
+    <div class="howto-grid-snippet">
+        {% import 'globals.html' as cli %}
+
+        <code>{{cli.howto_pandoc0 }}</code>
+        <br><br>
+        <code>{{cli.howto_pandoc1 }}</code>
+        <br><br>
+        <code>{{cli.howto_pandoc2 }}</code>
+        <br><br>
+        <code>{{cli.howto_pandoc3 }}</code>
+    </div>
+
+    <div class="howto-grid-output">
+        <video class="slideshow-video" controls>
+          <source src="/videos/screenRecPandocSlides.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<hr class="separator">
+
+<h2>{{ subtitle }}</h2>
+
+<p>There is a markdown-style syntax for the slides</p>
+
+<p><code>#</code> marks a new slide with a header</p>
+<p><code>-</code> marks a list item</p>
+<p><code>![title](path/to/image.png)</code> sources an image</p>
+<p>In the example three slides are directed into a plaintext source file</p>
+<p>Invoking <code>pandoc</code> with the library (DZSlides), the input (slides.txt) and output (slides.html) creates the presentation</p>
+
+<p></p>

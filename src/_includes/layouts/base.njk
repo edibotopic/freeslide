@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="/styles/main.css">
+    </head>
+
+    <body>
+
+    <div id="site-container">
+      {% include "partials/navigation.njk" %}
+
+      <header>
+          <img class="icon" src="{{ icon }}" title="{{ iconTip }}" style="width: 10%"></img>
+          <p>{{ description }}</p>
+      </header>
+
+      <main>
+        {{ content | safe }}
+      </main>
+    </div>
+
+    {% include "partials/footer.njk" %}
+    </body>
+</html>

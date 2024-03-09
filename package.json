@@ -1,0 +1,17 @@
+{
+  "name": "free slide",
+  "version": "0.0.1",
+  "description": "free tools for making slides",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "npx @11ty/eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [],
+  "author": "Shane Crowley",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

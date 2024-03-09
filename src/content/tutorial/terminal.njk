@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+title: Terminal
+permalink: "/tutorial/terminal.html"
+type: tutorial
+---
+
+<div class="tutorial-grid-container">
+    {% include "partials/toc-tutorial.njk" %}
+
+    <main class="tutorial-post">
+        <div class="tutorial-grid-text">
+            <h2>Overview</h2>
+
+            <section class="tutorial-section">
+            There are several tools for running presentations directly in the terminal.
+            My favourite is the Go-based <a href="https://maaslalani.com/slides/">slides</a>.
+
+            Once you have the <strong>slides</strong> binary downloaded you simply invoke it from
+            a terminal with a markdown file as argument.
+
+            While the idea of presenting from a terminal might seem primitive there
+            is support for cool features like syntax highlighting and diagrams 
+            out-of-the-box.
+            </section>
+
+            <hr>
+
+            <h2>Example</h2>
+            <section class="tutorial-section">
+                <div class="howto-grid-snippet">
+
+                    <pre><code>
+    # My Terminal Presentation
+    All I need to do is run
+
+    ```bash
+    slides myPresentation.md
+    ```
+
+    ---
+
+    ## Everything is markdown
+    You can easily **write**, **store** and **version** your slides.
+
+    ```python
+    def whatDoINeed(reqs: str):
+        print("The Slides binary")
+        print("A markdown file")
+    ```
+
+    ---
+
+    # Advantages
+
+    * Simple
+    * Fast
+    * A E S T H E T I C
+                </code></pre>
+            </div>
+
+            This produces the following output:
+            <br><br>
+
+            <div style="text-align: center">
+                <video class="slideshow-video" controls>
+                  <source src="/videos/terminal.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+            </div>
+            <br><br>
+
+            <hr>
+
+            <section class="tutorial-section">
+                <h2>Learn More</h2>
+                <ul>
+                    <li>This tool supports images but you need to have a compatible terminal. See if you can get it working.</li>
+                    <li>Slides can print the output of code snippets in your slides at runtime. Try it out with your favourite language.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</div>

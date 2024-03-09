@@ -1,0 +1,13 @@
+:root {
+    --pri-col: #f92672ff;
+    --pri-col2: #66d9efff;
+    --pri-col2-dim: #66d9ef91;
+    --pri-col3: #e6db74ff;
+    --pri-col4: violet;
+    --txt-col: #f1f2f3ff;
+    --txt-alt-col: violet;
+    --txt-dark-col: #42464cff;
+    --bg-col: #22282aff;
+    --hi-mark-col: #5f75b045;
+    --nav-col: #f9267282;
+}

@@ -1,0 +1,190 @@
+---
+layout: layouts/base.njk
+title: Adelie
+permalink: "/tutorial/adelie.html"
+type: tutorial
+---
+
+<div class="tutorial-grid-container">
+    {% include "partials/toc-tutorial.njk" %}
+
+    <main class="tutorial-post">
+        <div class="tutorial-grid-text">
+            <h2>Overview</h2>
+
+            <section class="tutorial-section">
+            The artist collective Hundred Rabbits creates a wide
+            variety of software tools that are intended to be free,
+            sustainable and open.
+            Many of these tools are designed to run on low-powered
+            devices.
+            A key ambition of their movement is to create offline-first
+            software that is easy to inspect and repair.
+            </section>
+
+            <section class="tutorial-section">
+            Recently they published the Adelie tool for making slide
+            presentations.
+            Adelie is built using their uxn virtual computer in a
+            custom stack-based flavour of assembly called TAL.
+
+            Adelie offers a unique approach to creating slides but
+            a bit of setup is required.
+
+            </section>
+
+            <hr>
+
+            <h2>Setup</h2>
+            <section class="tutorial-section">
+
+            First you need to download a uxn emulator for your device.
+            I downloaded the Linux version from their official site:
+
+                <div class="howto-grid-snippet">
+                    <pre><code>
+            curl -O https://rabbits.srht.site/uxn/uxn-essentials-lin64.tar.gz
+                    </code></pre>
+                </div>
+
+            I then decompressed the file into the current working directory:
+
+                <div class="howto-grid-snippet">
+                    <pre><code>
+            tar -xvzf uxn-essentials-lin64.tar.gz
+                    </code></pre>
+                </div>
+
+            This generates a <code>uxn</code> directory with a set of tools (.rom files) that
+            can be run with the uxn emulator (uxnemu binary). 
+
+            Adelie isn't provided by default, so we need to download it:
+
+                <div class="howto-grid-snippet">
+                    <pre><code>
+            curl -O https://rabbits.srht.site/adelie/adelie.rom
+                    </code></pre>
+                </div>
+
+            I created a <code>slides</code> directory in <code>uxn</code>.
+            In <code>slides</code> I created an <code>img</code> subdirectory and
+            a plaintext <code>slides</code> file.
+
+            Adelie supports images in the <code>.tga</code> format, so I included
+            an image of my face and a tree.
+
+            In the slides file I added the following markup:
+
+                <div class="howto-grid-snippet">
+                    <pre><code>
+        SIZE 30,1c ( set window size )
+
+        ( test )
+
+        NAME Introduction
+        FILL 03
+        GOTO auto
+        MODE 0c
+        PICT img/me.tga
+        GOTO 04,0d
+        HEAD Shane
+        MOVE 00,02
+        TEXT Who am I
+            - These slides were made with Adelie
+            - This is how speaker's notes are recorded.
+            - Tabbed lines will be printed to the console.
+
+        ( slide 2 )
+
+        NAME Me
+        FILL 03
+        GOTO 04,0d
+        HEAD Career
+
+        NAME Education
+        MOVE 00,02
+        TEXT EDUCATION	BSc and PhD in Food Science
+
+        NAME Today
+        TEXT WORK	 University teaching and research
+
+        ( slide 3 )
+
+        NAME Me
+        FILL 00
+        GOTO 04,0d
+        HEAD Writing
+
+        NAME Science
+        MOVE 00,02
+        TEXT SCIENCE	>65 articles published
+
+        NAME Tech
+        TEXT DOCS	 tutorials, reports, How-Tos 
+
+        NAME Code
+        TEXT CODE	 Java, JS, Go... (hobbyist)
+
+        ( final )
+
+        NAME Final
+        FILL 00
+        GOTO auto
+        MODE 03
+        PICT img/tree.tga
+        MOVE 00,02
+        MODE 03
+        TEXT THANKS!!!
+            - Thank you all.
+                    </code></pre>
+                </div>
+
+                There is a lot going on here but it has excellent
+                readability once you are familiar with the markup.
+                The syntax is minimal and mostly relies on a small
+                set of keywords and positions using hexadecimal.
+
+                The following command is run in the terminal to run the
+                presentation.
+                First the emulator is called, followed by the adelie rom
+                and then the slides file.
+                In my case, the emulator and rom were one directory up
+                from my working directory:
+
+                <div class="howto-grid-snippet">
+                    <pre><code>
+                ../uxnemu ../adelie.rom slides
+                    </code></pre>
+                </div>
+
+            This produces the following output:
+            <br><br>
+
+            <div style="text-align: center">
+                <video class="slideshow-video" controls>
+                  <source src="/videos/adelie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+            </div>
+            <br><br>
+
+                While Adelie has some friction, such as the requirement
+                for a .tga image format and a new markup language, these
+                constraints can help ensure you stay focused on the key
+                ideas in your presentation.
+
+            </section>
+
+            <hr>
+
+            <h2>Learn More</h2>
+            <section class="tutorial-section">
+                <ul>
+                    <li>Find a heaxadecimal conversion table to figure out how positioning works</li>
+                    <li>Create your own Adelie theme by adjusting the colour values</li>
+                    <li>Explore how animations can be created using WAIT, PATT and FILL keywords</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+</div>

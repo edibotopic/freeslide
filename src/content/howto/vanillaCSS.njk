@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: Vanilla CSS
+subtitle: The CSS
+permalink: "/howto/vanillaCSS.html"
+type: howto
+---
+
+<main class="howto-main">
+    <p>{{ title }} can be used to make a slideshow.
+    Navigate the slides on the right with arrow keys.
+    To view slides in full screen <a href="demoVanillaCSS/" target="_blank">click here</a>.</p>
+</main>
+
+<hr class="separator">
+
+<div class="howto-grid-container">
+
+{% include "partials/toc-howto.njk" %}
+
+    <div class="howto-grid-snippet">
+        <pre><code>&lt;div class=&quot;slides&quot;&gt;
+    &lt;section class=&quot;title&quot;&gt;
+        &lt;h1&gt;My Presentation&lt;/h1&gt;
+        &lt;p&gt;by Shane&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;To-do List&lt;/h1&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Get bread&lt;/li&gt;
+            &lt;li&gt;Cook rice&lt;/li&gt;
+            &lt;li&gt;Wear shoes&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;Picture a Tree&lt;/h1&gt;
+        &lt;img id=&quot;tree&quot; 
+        src=&quot;/images/tree.png&quot; 
+        alt=&quot;a tree&quot; title=&quot;a tree!&quot;&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+        </code></pre>
+    </div>
+
+
+    <div class="howto-grid-output">
+        <iframe class="slideshow-iframe" src="demoVanillaCSS.html"></iframe>
+    </div>
+</div>
+
+<hr class="separator">
+
+<h2>{{ subtitle }}</h2>
+
+<p>The <i>slides</i> class is given the CSS properties
+<code>scroll-snap-type: x mandatory</code>, 
+<code>overflow-x: scroll</code> and
+<code>display: flex</code>
+</p>
+
+<p>Each child <i>section</i> is given the CSS property
+<code>scroll-snap-align: start</code></p>
+
+<p>This provides the basic slide functionality. 
+Everything else is styling.</p>

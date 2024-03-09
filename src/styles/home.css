@@ -1,0 +1,36 @@
+.about {
+    font-size: 5vh;
+}
+
+.about > p {
+    /* padding-top: 20%; */
+}
+
+.about a {
+    text-decoration-thickness: 9px;
+}
+
+.about-grid-container {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 25% 50% 25%;
+}
+
+.about-grid-top {
+    grid-row-start: 1;
+    grid-column: span 3;
+    z-index: 1;
+}
+
+.about-grid-main {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    z-index: 2;
+}
+
+.about-grid-bottom {
+    grid-row-start: 3;
+    grid-column: span 3;
+    z-index: 1;
+}

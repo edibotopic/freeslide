@@ -1,0 +1,54 @@
+.tutorial-post {
+    justify-content: left;
+    margin: 50px;
+    margin-top: 10px;
+}
+
+.tutorial-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.tutorial-section > h1,h2,h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tutorial-grid-container {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 20% 80%;
+}
+
+.tutorial-grid-toc {
+    grid-column-start: 1;
+    margin-top: 10px;
+}
+
+.tutorial-grid-text {
+    grid-column-start: 3;
+}
+
+.tutorial-grid-portal-container {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 10% 40% 40% 10%;
+}
+
+#tutorial-head {
+    grid-column: span 4;
+}
+
+.tutorial-grid-portal-toc {
+    grid-column-start: 2;
+}
+
+.tutorial-grid-portal-diataxis {
+    grid-column-start: 3;
+}
+
+.tutorial-grid-portal-diataxis > blockquote {
+    margin: 0px;
+    font-size: 3vh;
+}

@@ -1,0 +1,215 @@
+---
+layout: layouts/base.njk
+title: Vanilla CSS
+permalink: "/tutorial/vanillaCSS.html"
+type: tutorial
+---
+
+<div class="tutorial-grid-container">
+    {% include "partials/toc-tutorial.njk" %}
+
+    <main class="tutorial-post">
+        <div class="tutorial-grid-text">
+            <h2>Overview</h2>
+
+            <section class="tutorial-section">
+            Libraries like reveal.js allow web technology to be
+            leveraged to create dynamic presentations.
+            However, you may not require the functionality that
+            the JavaScript offers.
+            Using vanilla CSS is a simple and lightweight alternative.
+            </section>
+
+            <section class="tutorial-section">
+            Creating slides using CSS relies on the <code>scroll snap</code> module.
+            All that is needed to build a slideshow using this approach is a CSS
+            stylesheet and a html file.
+            Here you will be building a presentation with multiple slides and images.
+                <blockquote>
+                    <i>The CSS scroll snap module provides properties that let you
+                    control the panning and scrolling behavior by defining snap
+                    positions. Content can be snapped into position as the user
+                    scrolls overflowing content within a scroll container,
+                    providing paging and scroll positioning.</i>
+                    <span class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">mdn web docs</a>
+                </blockquote>
+            </section>
+
+            <hr>
+
+            <section class="tutorial-section">
+                <h2>Code</h2>
+                Open a terminal and create an index.html and a main.css
+                <code>touch index.html main.css</code>
+
+                <h3>HTML</h3>
+                In your favourite text editor add the following markup to `index.html`:<br><br>
+
+            <div class="howto-grid-snippet">
+
+        <pre><code>&lt;div class=&quot;slides&quot;&gt;
+    &lt;section class=&quot;title&quot;&gt;
+        &lt;h1&gt;My Presentation&lt;/h1&gt;
+        &lt;p&gt;by Shane&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;To-do List&lt;/h1&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Get bread&lt;/li&gt;
+            &lt;li&gt;Cook rice&lt;/li&gt;
+            &lt;li&gt;Wear shoes&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h1&gt;Picture a Tree&lt;/h1&gt;
+        &lt;img id=&quot;tree&quot; 
+        src=&quot;/images/tree.png&quot; 
+        alt=&quot;a tree&quot; title=&quot;a tree!&quot;&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+
+                Each section in the html corresponds to an individual slide.
+                Conventional html elements like headers and lists are used
+                to structure each slide.
+
+                Everything is wrapped in a div with the `slides` class.
+
+                I have excluded boilerplate but make sure you have
+                referenced the CSS file in your index.html
+            </section>
+
+            <section class="tutorial-section">
+                <h3>CSS</h3>
+                The slides class, its component slides and their elements are
+                targeted with the following styles defined in `main.css`:
+
+            <div class="howto-grid-snippet">
+                <pre><code>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .slides {
+        scroll-snap-type: x mandatory;
+        display: flex;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        border: none;
+    }
+
+    .slides section {
+        background-color: black;
+        color: violet;
+        border-right: 1px solid white;
+        padding: 1em;
+        min-width: 100vw;
+        height: 100vh;
+        scroll-snap-align: start;
+        text-align: center;
+        position: relative;
+    }
+
+    .slides .title h1 {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-50%);
+        text-align: center;
+        width: 100%;
+        left: 0;
+        font-size: calc(1em + 3vw);
+    }
+
+    .slides .title p {
+        position: absolute;
+        top: 60%;
+        transform: translateY(-50%);
+        text-align: center;
+        width: 100%;
+        left: 0;
+        font-size: calc(1em + 3vw);
+    }
+
+    .slides p, ul, img {
+        position: relative;
+        top: 40%;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        font-size: calc(1em + 1vw);
+    }
+
+    .slides ul {
+        padding-left: 25%;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .slides h1 {
+        position: absolute;
+        top: 20%;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        font-size: calc(1em + 3vw);
+    }
+
+    .wrapper {
+        text-align: center;
+        margin: auto;
+        width: 500px;
+        height: 400px;
+    }
+
+    #tree {
+        width: 35%;
+    }
+
+    #slide-frame {
+        border: violet 8px solid;
+        width: 100%;
+        height: 100%;
+    }
+
+                </code></pre>
+            </div>
+            
+            <section class="tutorial-section">
+            If you are familiar with basic HTML and CSS this
+            approach offers a lightweight alternative to JavaScript-
+            based libraries like reveal.js.
+            The scroll snap module allows the creation of a pleasing
+            interface with a sliding transition triggered by the arrow
+            keys.
+            All with <i>no JavaScript</i>.
+
+            Reveal.js comes pre-packaged with a large number of
+            features and themes that you may not need.
+            Basic theming can be accomplised by adjusting background and
+            font colours in a CSS file.
+            Media like audio and video can be included using standard
+            html tags.
+            </section>
+
+            <hr>
+
+            <section class="tutorial-section">
+                <h2>Learn More</h2>
+                <ul>
+                    <li>Edit the content of individual sections, save the file and open it in a browser.</li>
+                    <li>Try adding a new section with your own content.</li>
+                    <li>Explore including media with video and audio tags. </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+</div>
+
