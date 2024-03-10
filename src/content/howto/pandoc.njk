@@ -1,19 +1,20 @@
 ---
 layout: layouts/base.njk
-title: Motion Canvas
+title: Pandoc
 subtitle: The Code
 permalink: "/howto/pandoc.html"
 type: howto
 icon: "/images/markdown.svg"
 iconRef: "https://pandoc.org/chunkedhtml-demo/10-slide-shows.html"
-description: Markdown to slides with Pandoc
+description: Convert markdown to slides with Pandoc
 ---
 
 <main class="howto-section">
     <section class="howto-abstract">
-        <p>{{ title }} is a powerful CLI tool for converting document formats.
-        Here it will be used to convert a plaintext file to a web-based
-        slide presentation using the lightweight DZslides CSS library.
+        <p>{{ title }} is a powerful CLI tool for converting document formats.</p>
+        <p>Here it will be used to convert a plaintext file to a web-based</p>
+        <p>slide presentation using the lightweight <a href="https://github.com/paulrouget/dzslides">DZslides</a> CSS library.</p>
+
     </section>
 
     <hr class="separator">
@@ -47,13 +48,13 @@ description: Markdown to slides with Pandoc
     <aside class="howto-section">
         <h2>{{ subtitle }}</h2>
 
-        <p>There is a markdown-style syntax for the slides</p>
+        <p>Markdown syntax is used for the slides</p>
 
         <p><code>#</code> marks a new slide with a header</p>
         <p><code>-</code> marks a list item</p>
         <p><code>![title](path/to/image.png)</code> sources an image</p>
         <p>In the example three slides are directed into a plaintext source file</p>
-        <p>Invoking <code>pandoc</code> with the library (DZSlides), the input (slides.txt) and output (slides.html) creates the presentation</p>
+        <p>Invoking <code>pandoc</code> with the library (DZSlides), the input (slides.md) and output (slides.html) creates the presentation</p>
 
     </aside>
 </main>
