@@ -1,14 +1,15 @@
-<div class="wiki-grid-container">
-    <div class="wiki-grid-far-left">
+<main class="wiki-grid-container">
+    <article class="wiki-grid-far-left">
         <h2 class="wiki-header">{{ categories[0].title }}</h2>
         <hr class="wiki-rule">
         <p class="wiki-desc">{{ categories[0].desc }}</p>
         <hr class="wiki-rule">
-        <ul class="wiki-list">
+        <section class="wiki-list">
             <details>
                 <summary>Vanilla CSS</summary>
                 Slides can be written in <code>HTML</code> and
                 animated using vanilla <code>CSS</code>.
+                See <a class="wiki-link" href="/howto/vanillaCSS">howto</a> and <a class="wiki-link" href="/tutorial/vanillaCSS/">tutorial</a>.
             </details>
             <details>
                 <summary>Reveal JS</summary>
@@ -21,15 +22,17 @@
                 Slides can be written in <code>markdown</code> and
                 converted into a website using a variety of libraries
                 including DZSlides (CSS) and Reveal.js (JS/CSS).
+                See <a class="wiki-link" href="/howto/pandoc">how-to</a>.
             </details>
-        </ul>
-    </div>
-    <div class="wiki-grid-mid-left">
+        </section>
+    </article>
+
+    <article class="wiki-grid-mid-left">
         <h2 class="wiki-header">{{ categories[1].title }}</h2>
         <hr class="wiki-rule">
         <p class="wiki-desc">{{ categories[1].desc }}</p>
         <hr class="wiki-rule">
-        <ul class="wiki-list">
+        <section class="wiki-list">
             <details>
                 <summary>Manim Slides</summary>
                 Slides can be written in <code>Python</code> using
@@ -39,15 +42,17 @@
                 <summary>Motion Canvas</summary>
                 Slides can be written in <code>TypeScript</code>
                 using Motion Canvas and its Presentation Mode. 
+                See <a class="wiki-link" href="/howto/motionCanvas">how-to</a>.
             </details>
-        </ul>
-    </div>
-    <div class="wiki-grid-mid-right">
+        </section>
+    </article>
+
+    <article class="wiki-grid-mid-right">
         <h2 class="wiki-header">{{ categories[2].title }}</h2>
         <hr class="wiki-rule">
         <p class="wiki-desc">{{ categories[2].desc }}</p>
         <hr class="wiki-rule">
-        <ul class="wiki-list">
+        <section class="wiki-list">
             <details>
                 <summary>LaTeX</summary>
                 Slides can be written in <code>LaTeX</code> and
@@ -58,32 +63,32 @@
                 Slides can be written in <code>Typst</code>
                 and compiled into slides using the polylux package.
             </details>
-        </ul>
-    </div>
-    <div class="wiki-grid-far-right">
+        </section>
+    </article>
+
+    <article class="wiki-grid-far-right">
         <h2 class="wiki-header">{{ categories[3].title }}</h2>
         <hr class="wiki-rule">
         <p class="wiki-desc">{{ categories[3].desc }}</p>
         <hr class="wiki-rule">
-        <ul class="wiki-list">
+        <section class="wiki-list">
             <details>
                 <summary>CLI</summary>
                 Slides can be written in <code>markdown</code> and
                 presented directly in the terminal using a variety
                 of tools.
+                See <a class="wiki-link" href="/tutorial/terminal">tutorial</a>.
             </details>
             <details>
                 <summary>Go</summary>
                 Slides can be written with executable <code>Go</code> 
                 code using golang.org's present package. 
-
             </details>
             <details>
                 <summary>Uxn</summary>
                 Slides can be written in a minimal syntax and
                 run using the Uxn virtual machine.
+                See <a class="wiki-link" href="/tutorial/adelie">tutorial</a>.
             </details>
-    </div>
-</div>
-
-<br>
+    </article>
+</main>
