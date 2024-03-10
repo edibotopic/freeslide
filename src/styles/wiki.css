@@ -5,6 +5,11 @@
   color: var(--bg-col);
 }
 
+#wiki-top-head {
+  grid-column: span 2 / 5;
+  color: var(--txt-col);
+}
+
 .wiki-header {
   padding-bottom: 5px;
 }

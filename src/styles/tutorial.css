@@ -39,8 +39,7 @@ h3 {
 }
 
 #tutorial-head {
-  grid-column: span 4;
-  color: yellow;
+  grid-column: span 3 / 4;
 }
 
 .tutorial-grid-portal-toc {
