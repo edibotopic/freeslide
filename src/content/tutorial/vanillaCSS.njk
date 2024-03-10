@@ -3,6 +3,9 @@ layout: layouts/base.njk
 title: Vanilla CSS
 permalink: "/tutorial/vanillaCSS.html"
 type: tutorial
+icon: /images/css.svg
+iconRef: "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type"
+description: Vanilla CSS
 ---
 
 <div class="tutorial-grid-container">
@@ -13,41 +16,44 @@ type: tutorial
             <h2>Overview</h2>
 
             <section class="tutorial-section">
-            Libraries like reveal.js allow web technology to be
+            <p>Libraries like reveal.js allow web technology to be
             leveraged to create dynamic presentations.
             However, you may not require the functionality that
             the JavaScript offers.
-            Using vanilla CSS is a simple and lightweight alternative.
+            Using vanilla CSS is a simple and lightweight alternative.</p>
             </section>
 
             <section class="tutorial-section">
-            Creating slides using CSS relies on the <code>scroll snap</code> module.
+            <p>Creating slides using CSS relies on the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type">scroll snap</a> module.
             All that is needed to build a slideshow using this approach is a CSS
             stylesheet and a html file.
-            Here you will be building a presentation with multiple slides and images.
+            Here you will be building a presentation with multiple slides and images.</p>
                 <blockquote>
                     <i>The CSS scroll snap module provides properties that let you
                     control the panning and scrolling behavior by defining snap
                     positions. Content can be snapped into position as the user
                     scrolls overflowing content within a scroll container,
                     providing paging and scroll positioning.</i>
-                    <span class="source"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">mdn web docs</a>
+                    <span class="source">
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll_snap">mdn web docs</a>
+                    </span>
                 </blockquote>
             </section>
 
-            <hr>
+            <hr class="separator">
 
             <section class="tutorial-section">
                 <h2>Code</h2>
-                Open a terminal and create an index.html and a main.css
+                <p>Open a terminal and create an index.html and a main.css</p>
                 <code>touch index.html main.css</code>
 
                 <h3>HTML</h3>
-                In your favourite text editor add the following markup to `index.html`:<br><br>
+                <p>In your favourite text editor add the following markup to `index.html`:</p>
 
             <div class="howto-grid-snippet">
 
-        <pre><code>&lt;div class=&quot;slides&quot;&gt;
+                <pre><code>
+&lt;div class=&quot;slides&quot;&gt;
     &lt;section class=&quot;title&quot;&gt;
         &lt;h1&gt;My Presentation&lt;/h1&gt;
         &lt;p&gt;by Shane&lt;/p&gt;
@@ -70,20 +76,18 @@ type: tutorial
                 </code></pre>
             </div>
 
-                Each section in the html corresponds to an individual slide.
+                <p>Each section in the html corresponds to an individual slide.
                 Conventional html elements like headers and lists are used
                 to structure each slide.
-
                 Everything is wrapped in a div with the `slides` class.
-
                 I have excluded boilerplate but make sure you have
-                referenced the CSS file in your index.html
+                referenced the CSS file in your index.html</p>
             </section>
 
             <section class="tutorial-section">
                 <h3>CSS</h3>
-                The slides class, its component slides and their elements are
-                targeted with the following styles defined in `main.css`:
+                <p>The slides class, its component slides and their elements are
+                targeted with the following styles defined in `main.css`:</p>
 
             <div class="howto-grid-snippet">
                 <pre><code>
@@ -177,28 +181,27 @@ type: tutorial
         width: 100%;
         height: 100%;
     }
-
                 </code></pre>
             </div>
             
             <section class="tutorial-section">
-            If you are familiar with basic HTML and CSS this
+            <p>If you are familiar with basic HTML and CSS this
             approach offers a lightweight alternative to JavaScript-
             based libraries like reveal.js.
             The scroll snap module allows the creation of a pleasing
             interface with a sliding transition triggered by the arrow
             keys.
-            All with <i>no JavaScript</i>.
+            All with <i>no JavaScript</i>.</p>
 
-            Reveal.js comes pre-packaged with a large number of
+            <p>Reveal.js comes pre-packaged with a large number of
             features and themes that you may not need.
             Basic theming can be accomplised by adjusting background and
             font colours in a CSS file.
             Media like audio and video can be included using standard
-            html tags.
+            html tags.</p>
             </section>
 
-            <hr>
+            <hr class="separator">
 
             <section class="tutorial-section">
                 <h2>Learn More</h2>
@@ -210,6 +213,4 @@ type: tutorial
             </section>
         </div>
     </main>
-
 </div>
-

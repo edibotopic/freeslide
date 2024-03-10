@@ -4,21 +4,24 @@ title: Vanilla CSS
 subtitle: The CSS
 permalink: "/howto/vanillaCSS.html"
 type: howto
+icon: "/images/css.svg"
+iconRef: "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-type"
+description: Vanilla CSS
 ---
 
-<main class="howto-main">
+<section class="howto-abstract">
     <p>{{ title }} can be used to make a slideshow.
     Navigate the slides on the right with arrow keys.
     To view slides in full screen <a href="demoVanillaCSS/" target="_blank">click here</a>.</p>
-</main>
+</section>
 
 <hr class="separator">
 
 <div class="howto-grid-container">
 
-{% include "partials/toc-howto.njk" %}
+    {% include "partials/toc-howto.njk" %}
 
-    <div class="howto-grid-snippet">
+    <section class="howto-section howto-grid-snippet">
         <pre><code>&lt;div class=&quot;slides&quot;&gt;
     &lt;section class=&quot;title&quot;&gt;
         &lt;h1&gt;My Presentation&lt;/h1&gt;
@@ -40,26 +43,27 @@ type: howto
     &lt;/section&gt;
 &lt;/div&gt;
         </code></pre>
-    </div>
+    </section>
 
-
-    <div class="howto-grid-output">
+    <section class="howto-section howto-grid-output">
         <iframe class="slideshow-iframe" src="/static/css_slides/"></iframe>
-    </div>
+    </section>
 </div>
 
 <hr class="separator">
 
-<h2>{{ subtitle }}</h2>
+    <section class="howto-section">
+        <h2>{{ subtitle }}</h2>
 
-<p>The <i>slides</i> class is given the CSS properties
-<code>scroll-snap-type: x mandatory</code>, 
-<code>overflow-x: scroll</code> and
-<code>display: flex</code>
-</p>
+        <p>The <i>slides</i> class is given the CSS properties
+        <code>scroll-snap-type: x mandatory</code>, 
+        <code>overflow-x: scroll</code> and
+        <code>display: flex</code>
+        </p>
 
-<p>Each child <i>section</i> is given the CSS property
-<code>scroll-snap-align: start</code></p>
+        <p>Each child <i>section</i> is given the CSS property
+        <code>scroll-snap-align: start</code></p>
 
-<p>This provides the basic slide functionality. 
-Everything else is styling.</p>
+        <p>This provides the basic slide functionality. 
+        Everything else is styling.</p>
+    </section>
