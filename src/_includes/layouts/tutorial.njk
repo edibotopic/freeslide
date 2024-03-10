@@ -1,12 +1,18 @@
-<div class="tutorial-grid-portal-container">
-    <div class="tutorial-grid-portal-toc">
+<main class="tutorial-grid-portal-container">
+    <header id="tutorial-head">
+        <p>{{ header }}</p>
+        <br>
+    </header>
+
+    <nav class="tutorial-grid-portal-toc">
         {% include "partials/toc-tutorial.njk" %}
-    </div>
-    <div class="tutorial-grid-portal-diataxis">
+    </nav>
+
+    <section class="tutorial-grid-portal-diataxis">
         <blockquote>
         A tutorial is a practical activity, in which the student learns by doing something meaningful, towards some achievable goal.
         A tutorial serves the user’s acquisition of skills and knowledge - their study. Its purpose is not to help the user get something done, but to help them learn.
         </blockquote>
         <p>—<a href="https://diataxis.fr/tutorials/">Diataxis website</a></p>
-    </div>
-</div>
+    </section>
+</main>
