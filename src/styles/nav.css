@@ -1,4 +1,4 @@
-.nav {
+.nav-list {
   display: flex;
   justify-content: space-around;
   color: var(--txt-col);
@@ -7,33 +7,32 @@
 }
 
 .nav-item .icon {
-    position: absolute;
-    width: 1em;
-    transition: 0.2s
+  position: absolute;
+  width: 1em;
+  transition: 0.2s;
 }
 
 .nav-item .icon:hover {
-    width: 1.1em;
+  width: 1.1em;
 }
 
-.nav li {
+.nav-list li {
   color: var(--txt-col);
   list-style-type: none;
 }
 
-.nav li :link {
+.nav-list li :link {
   color: var(--txt-col);
   text-decoration: none;
 }
 
-.nav li :hover {
+.nav-list li :hover {
   color: var(--txt-col);
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-underline-offset: 3px;
 }
 
-.nav li :visited {
-    color: var(--txt-col);
+.nav-list li :visited {
+  color: var(--txt-col);
 }
-

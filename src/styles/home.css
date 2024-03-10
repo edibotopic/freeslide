@@ -1,36 +1,32 @@
 .about {
-    font-size: 5vh;
-}
-
-.about > p {
-    /* padding-top: 20%; */
+  font-size: 5vh;
 }
 
 .about a {
-    text-decoration-thickness: 9px;
+  text-decoration-thickness: 7px;
 }
 
 .about-grid-container {
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 25% 50% 25%;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 25% 50% 25%;
 }
 
 .about-grid-top {
-    grid-row-start: 1;
-    grid-column: span 3;
-    z-index: 1;
+  grid-row-start: 1;
+  grid-column: span 3;
+  z-index: 1;
 }
 
 .about-grid-main {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    z-index: 2;
+  grid-row-start: 2;
+  grid-column-start: 2;
+  z-index: 2;
 }
 
 .about-grid-bottom {
-    grid-row-start: 3;
-    grid-column: span 3;
-    z-index: 1;
+  grid-row-start: 3;
+  grid-column: span 3;
+  z-index: 1;
 }
