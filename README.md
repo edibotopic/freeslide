@@ -70,6 +70,47 @@ Further effort is required to improve the site, including:
 - [ ] Make mobile-friendly
 - [ ] Add more examples
 - [ ] Include GitHub repo link
+- [ ] **Fix broken TOC styling (see below)**
+
+## Bugs
+
+The Table of Contents on how-to and tutorial pages should
+have no bullets by default:
+
+```css
+[class*='grid-toc'] ul {
+  list-style-type: none;
+  margin-top: 10px;
+  padding-left: 0px;
+}
+```
+
+Then a bullet should appear before a list item on hover:
+
+```css
+[class*='grid-toc'] li :hover::before {
+  content: '●';
+  color: violet;
+  transition: 0.6s;
+}
+```
+
+The `type` of page (how-to or tutorial) is defined
+in YAML front-matter and injected into the class name
+according to the following `.njk` template:
+
+```html
+<div class="{{ type }}-grid-toc">
+    ...
+</div>
+```
+
+Originally, there was a distinct `howto-grid-toc`
+and `tutorial-grid-toc` defined in `base.css`.
+
+During a refactor I cleaned this up into a single
+`grid-toc` class in a `grid-toc.css` file, thereby
+breaking the hover functionality described above.
 
 ## References and Sources
 
